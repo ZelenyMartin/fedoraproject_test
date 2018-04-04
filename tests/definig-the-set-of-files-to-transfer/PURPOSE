@@ -1,0 +1,16 @@
+PURPOSE of /CoreOS/rsync/Sanity/definig-the-set-of-files-to-transfer
+Description: Tests the options which modifie the list of files to be transfered
+Author: Michal Trunecka <mtruneck@redhat.com>
+Author: Karel Srot <ksrot@redhat.com>
+
+Testing the sanity of following options:
+  -c --checksum
+  --ignore-existing
+  --max-size --min-size
+  --size-only
+  --include --exclude
+  --include-from --exclude-from
+
+Not yet implemented:
+  -0, --from0
+  -f --filter, -F

@@ -1,0 +1,25 @@
+---
+# Tests that run in classic context
+- hosts: localhost
+  roles:
+  - role: standard-test-beakerlib
+    tags:
+    - classic
+    tests:
+    - definig-the-set-of-files-to-transfer
+    - setting-group-acls
+    - IPv4-vs-IPv6-preferring
+    required_packages:
+    - rsync         # all tests require rsync
+    - rsync-daemon  # definig-the-set-of-files-to-transfer requires rsync-daemon
+    - acl           # setting-group-acls requires acl
+    - net-tools     # IPv4-vs-IPv6-preferring requires net-tools
+
+# Tests that run against Atomic Host
+- hosts: localhost
+  roles:
+  - role: standard-test-beakerlib
+    tags:
+    - atomic
+    tests:
+    - setting-group-acls

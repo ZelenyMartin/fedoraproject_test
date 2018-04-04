@@ -1,0 +1,3 @@
+PURPOSE of setting-group-acls
+Description: If you are using the -A/--acls option and you are not running as root and are not using the --numeric-ids option then if you have an ACL that includes a group entry for a group you are not a member of on the receiving side, then acl_set_file will return EINVAL, b/c rsync mistakenly maps the group name to gid GID_NONE (-1), which (fortunately) fails.
+Author: Ales Marecek <amarecek@redhat.com>

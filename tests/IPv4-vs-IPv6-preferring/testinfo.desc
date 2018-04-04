@@ -1,0 +1,14 @@
+Owner:           Martin Zeleny <mzeleny@redhat.com>
+Name:            /CoreOS/rsync/Sanity/IPv4-vs-IPv6-preferring
+TestVersion:     1.0
+Path:            /mnt/tests/CoreOS/rsync/Sanity/IPv4-vs-IPv6-preferring
+Description:     Test if connection over IPv4 or IPv6 is used
+Type:            Sanity
+TestTime:        5m
+RunFor:          rsync
+Requires:        rsync net-tools
+Priority:        Normal
+License:         GPLv2+
+Confidential:    no
+Destructive:     no
+Releases:        -RHEL4 -RHELClient5 -RHELServer5
